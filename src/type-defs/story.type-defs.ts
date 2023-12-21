@@ -1,10 +1,4 @@
 export const storyTypeDefs = `#graphql
-	type Author {
-		id: ID!
-		name: String!
-		avatarUrl: String!
-	}
-
 	type Story {
 		id: ID!
 		author: Author!
