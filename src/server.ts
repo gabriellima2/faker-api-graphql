@@ -9,8 +9,12 @@ const server = new ApolloServer({
 	resolvers,
 })
 
-const { url } = await startStandaloneServer(server, {
-	listen: { port: 3001 },
-})
+async function bootstrap() {
+	const { url } = await startStandaloneServer(server, {
+		listen: { port: 3001 },
+	})
 
-console.log(`🚀 Server ready at: ${url}`)
+	console.log(`🚀 Server ready at: ${url}`)
+}
+
+bootstrap()
