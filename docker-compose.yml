@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    container_name: friendly-api
+    restart: always
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3001:3001
