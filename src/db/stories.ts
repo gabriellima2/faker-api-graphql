@@ -6,7 +6,7 @@ import type { StoryEntity } from '../entities/story.entity'
 function createStory(): StoryEntity {
 	return {
 		id: faker.string.uuid(),
-		imageUrl: 'https://picsum.photos/440?random=1',
+		imageUrl: faker.image.url({ width: 440, height: 440 }),
 		author: createAuthor(),
 	}
 }

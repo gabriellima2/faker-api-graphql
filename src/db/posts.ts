@@ -9,7 +9,7 @@ function createPost(): PostEntity {
 	return {
 		id: faker.string.uuid(),
 		description: faker.lorem.lines(1),
-		imageUrl: 'https://picsum.photos/440?random=1',
+		imageUrl: faker.image.url({ width: 440, height: 440 }),
 		author: createAuthor(),
 		comments: faker.helpers.multiple(createComment, {
 			count: { min: 0, max: 32 },
